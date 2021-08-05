@@ -7,14 +7,20 @@ public class Walkingcontrol : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
-
+    
+    //Refers to the value of the Player's initial speed
     public float speed = 6f;
+    //Refers to the value of the Player's dash distance
     public float dash = 50f;
+    //Refers to the value of the Player's gravity
     public float gravity = -9.81f;
+    //Refers to the value of the Player's jump height
     public float jumpHeight = 1f;
+    //Refers to the value of the Player's current speed
     private float currentSpeed;
-
+    //Refers to the time it takes for the player to turn direction smoothly
     public float turnSmoothTime = 0.1f;
+    //Refers to the speed it takes for the player to turn direction smoothly
     float turnSmoothVelocity;
 
     public Transform groundCheck;
@@ -30,6 +36,7 @@ public class Walkingcontrol : MonoBehaviour
     [SerializeField]
     private AudioSource SprintSource;
 
+    public float PlayerHealth = 100;
 
     void Start()
     {
@@ -102,5 +109,18 @@ public class Walkingcontrol : MonoBehaviour
 
 
 
+    }
+    private void OnCollisionEnter(Collision collision)
+     {
+         if (collision.collider.gameObject.CompareTag("Enemy"))
+         {
+             Debug.Log("Enemy has collided with Player");
+             TakeDamage(20);
+         }
+     }
+    void TakeDamage(int damage)
+    {
+        PlayerHealth -= damage;
+        
     }
 }
