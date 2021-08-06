@@ -1186,11 +1186,11 @@ GameObject:
   - component: {fileID: 227610709}
   - component: {fileID: 227610710}
   - component: {fileID: 227610711}
-  - component: {fileID: 227610708}
   - component: {fileID: 227610712}
   - component: {fileID: 227610713}
   - component: {fileID: 227610714}
   - component: {fileID: 227610715}
+  - component: {fileID: 227610708}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1229,8 +1229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 227610709}
   cam: {fileID: 1743433828}
-  speed: 6
-  dash: 100
+  speed: 10
+  dash: 50
   gravity: -50
   jumpHeight: 10
   turnSmoothTime: 0.1
@@ -4701,7 +4701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112780988}
-  m_LocalRotation: {x: 0.058589943, y: -0.8124488, z: 0.08291102, w: 0.5741254}
+  m_LocalRotation: {x: 0.05858994, y: -0.8124488, z: 0.082911044, w: 0.57412535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11932,9 +11932,10 @@ GameObject:
   - component: {fileID: 1840081897}
   - component: {fileID: 1840081896}
   - component: {fileID: 1840081895}
+  - component: {fileID: 1840081901}
   m_Layer: 3
   m_Name: Bob
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11963,7 +11964,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840081894}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -12034,6 +12035,18 @@ Transform:
   m_Father: {fileID: 227610707}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840081901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840081894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67f933af9dca90479e209abd68285ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1842624091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5998109814200457598, guid: e4b20613a171b884a9254faab89e30e4,

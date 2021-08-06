@@ -20,6 +20,7 @@ public class HealthBar : MonoBehaviour
     private void Update()
     {
         currentHealth = Player.PlayerHealth;
-        HealthLength.fillAmount = currentHealth / MaxHealth;
+        HealthLength.fillAmount = currentHealth / MaxHealth;    
+        
     }
 }

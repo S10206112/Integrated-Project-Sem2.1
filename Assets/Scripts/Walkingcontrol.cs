@@ -69,6 +69,7 @@ public class Walkingcontrol : MonoBehaviour
         //jumping
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
+            
             JumpSource.Play();
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -110,14 +111,15 @@ public class Walkingcontrol : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision collision)
-     {
-         if (collision.collider.gameObject.CompareTag("Enemy"))
-         {
-             Debug.Log("Enemy has collided with Player");
-             TakeDamage(20);
-         }
-     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy touched player");
+            TakeDamage(10);
+        }
+    }
+
     void TakeDamage(int damage)
     {
         PlayerHealth -= damage;
