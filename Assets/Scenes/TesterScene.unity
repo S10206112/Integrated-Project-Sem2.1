@@ -1241,7 +1241,6 @@ MonoBehaviour:
     m_Bits: 64
   JumpSource: {fileID: 227610714}
   SprintSource: {fileID: 227610715}
-  PlayerHealth: 100
 --- !u!143 &227610709
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4701,7 +4700,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112780988}
-  m_LocalRotation: {x: 0.05858994, y: -0.8124488, z: 0.082911044, w: 0.57412535}
+  m_LocalRotation: {x: 0.058589943, y: -0.8124488, z: 0.08291102, w: 0.5741254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12047,6 +12046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67f933af9dca90479e209abd68285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHealth: 100
 --- !u!1 &1842624091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5998109814200457598, guid: e4b20613a171b884a9254faab89e30e4,
@@ -17028,6 +17028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  Player: {fileID: 1840081901}
 --- !u!114 &2115377024
 MonoBehaviour:
   m_ObjectHideFlags: 0

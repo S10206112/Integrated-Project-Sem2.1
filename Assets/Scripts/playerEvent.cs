@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerEvent : MonoBehaviour
 {
+    public float PlayerHealth = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,14 @@ public class playerEvent : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Enemy touched player");
-            
+            TakeDamage(10);
         }
+    }
+
+    void TakeDamage(int damage)
+    {
+        PlayerHealth -= damage;
+        
     }
 
 }

@@ -9,12 +9,12 @@ public class HealthBar : MonoBehaviour
     private Image HealthLength;
     public float currentHealth;
     private float MaxHealth = 100f;
-    Walkingcontrol Player;
+    public playerEvent Player;
 
     private void Start()
     {
         HealthLength =  GetComponent<Image>();
-        Player = FindObjectOfType<Walkingcontrol>();
+        Player = FindObjectOfType<playerEvent>();
 
     }
     private void Update()

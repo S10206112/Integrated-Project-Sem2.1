@@ -36,7 +36,7 @@ public class Walkingcontrol : MonoBehaviour
     [SerializeField]
     private AudioSource SprintSource;
 
-    public float PlayerHealth = 100;
+    //public float PlayerHealth = 100;
 
     void Start()
     {
@@ -111,18 +111,18 @@ public class Walkingcontrol : MonoBehaviour
 
 
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("Enemy touched player");
-            TakeDamage(10);
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+    //        Debug.Log("Enemy touched player");
+    //        TakeDamage(10);
+    //    }
+    //}
 
-    void TakeDamage(int damage)
-    {
-        PlayerHealth -= damage;
+    //void TakeDamage(int damage)
+    //{
+    //    PlayerHealth -= damage;
         
-    }
+    //}
 }
