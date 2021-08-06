@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Walkingcontrol : MonoBehaviour
 {
+    //refers to the player's controller
     public CharacterController controller;
+    //refers to the player's rotating camera
     public Transform cam;
     
     //Refers to the value of the Player's initial speed
@@ -23,16 +25,22 @@ public class Walkingcontrol : MonoBehaviour
     //Refers to the speed it takes for the player to turn direction smoothly
     float turnSmoothVelocity;
 
+    //refers to the object that checks if there is ground below the player
     public Transform groundCheck;
+    //refers to the distance from the ground that would consider the object is grounded
     public float groundDistance = 0.4f;
+    //refers to the layer which is considered as ground
     public LayerMask groundMask;
-
+    //refers to the velocity
     Vector3 velocity;
+    //bool for when the player is grounded
     bool isGrounded;
 
+    //refers to the audio source for player's jump
     [SerializeField]
     private AudioSource JumpSource;
     
+    //refers to the audio source for player's sprint
     [SerializeField]
     private AudioSource SprintSource;
 
@@ -40,6 +48,7 @@ public class Walkingcontrol : MonoBehaviour
 
     void Start()
     {
+        //define what is the character controller
         controller = GetComponent<CharacterController>();
         
     }
@@ -89,6 +98,7 @@ public class Walkingcontrol : MonoBehaviour
             SprintSource.Play();
             currentSpeed = speed * dash;
         }
+        //if the player is not sprinting
         else
         {
             currentSpeed = speed;
@@ -96,7 +106,7 @@ public class Walkingcontrol : MonoBehaviour
 
         
 
-
+        //if the player is moving in a certain direction, moves the character object to face that direction
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;

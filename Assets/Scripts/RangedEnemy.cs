@@ -29,7 +29,9 @@ public class RangedEnemy : MonoBehaviour
 
     private void Awake()
     {
+        //define what is player
         player = GameObject.Find("Player").transform;
+        //define the navmesh agent
         agent = GetComponent<NavMeshAgent>();
 
     }

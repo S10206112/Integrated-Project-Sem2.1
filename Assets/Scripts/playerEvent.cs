@@ -17,17 +17,21 @@ public class playerEvent : MonoBehaviour
     {
         
     }
+    //collision with player
     void OnTriggerEnter(Collider other)
     {
+        //if player collides with enemy
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Enemy touched player");
+            //player takes damage from the attack
             TakeDamage(10);
         }
     }
-
+    //take damage script
     void TakeDamage(int damage)
     {
+        //player health gets deducted by the damage taken
         PlayerHealth -= damage;
         
     }
