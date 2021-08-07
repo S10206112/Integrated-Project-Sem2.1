@@ -9,6 +9,9 @@ public class SimpleEnemyHealth : MonoBehaviour
     private int startingHealth = 5;
 
     private int currentHealth;
+    public GameObject EnemyName;
+    
+    public GameObject Minions;
 
     private void OnEnable()
     {
@@ -18,6 +21,12 @@ public class SimpleEnemyHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        Debug.Log(currentHealth);
+        if (EnemyName.name == "PenguinBoss")
+            {
+                Instantiate(Minions, new Vector3(80, 100, 575), Quaternion.identity);
+                Debug.Log("Minions spawned");
+            }
 
         if (currentHealth <= 0)
             Die();
