@@ -27,6 +27,12 @@ public class playerEvent : MonoBehaviour
             //player takes damage from the attack
             TakeDamage(10);
         }
+        //if player jumps on trampoline
+        if (other.gameObject.CompareTag("Trampoline"))
+        {
+            Debug.Log("Player landed on trampoline");
+            
+        }
     }
     //take damage script
     void TakeDamage(int damage)

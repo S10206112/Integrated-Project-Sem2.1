@@ -28,6 +28,7 @@ public class SimpleEnemyHealth : MonoBehaviour
                 Debug.Log("Minions spawned");
             }
 
+        //if the enemy is dead
         if (currentHealth <= 0)
             Die();
     }
