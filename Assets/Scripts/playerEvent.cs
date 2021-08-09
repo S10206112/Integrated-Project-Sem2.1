@@ -6,6 +6,8 @@ public class playerEvent : MonoBehaviour
 {
     public float PlayerHealth = 100;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,11 @@ public class playerEvent : MonoBehaviour
             TakeDamage(10);
         }
         //if player jumps on trampoline
-        if (other.gameObject.CompareTag("Trampoline"))
-        {
-            Debug.Log("Player landed on trampoline");
+        //if (other.gameObject.CompareTag("Trampoline"))
+        //{
+        //    Debug.Log("Player landed on trampoline");
             
-        }
+        //}
     }
     //take damage script
     void TakeDamage(int damage)

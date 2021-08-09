@@ -9,6 +9,8 @@ public class Walkingcontrol : MonoBehaviour
     public CharacterController controller;
     //refers to the player's rotating camera
     public Transform cam;
+
+    public playerEvent playerEvent;
     
     //Refers to the value of the Player's initial speed
     public float speed = 6f;
@@ -97,6 +99,7 @@ public class Walkingcontrol : MonoBehaviour
         {
             SprintSource.Play();
             currentSpeed = speed * dash;
+            playerEvent.PlayerHealth -= 5;
         }
         //if the player is not sprinting
         else
@@ -120,6 +123,19 @@ public class Walkingcontrol : MonoBehaviour
 
 
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        //if player jumps on trampoline
+        if (other.gameObject.CompareTag("Trampoline"))
+        {
+            Debug.Log("Player landed on trampoline");
+            jumpHeight = 80;
+        }
+        else 
+        {
+            jumpHeight = 8;
+        }
     }
     //void OnTriggerEnter(Collider other)
     //{
