@@ -136,6 +136,13 @@ public class Walkingcontrol : MonoBehaviour
         {
             jumpHeight = 8;
         }
+
+        if (other.gameObject.CompareTag("TeleportToBox"))
+        {
+            Debug.Log("Teleported to Box");
+            //player takes damage from the attack
+            controller.transform.position = new Vector3( -570, 4, 520);
+        }
     }
     //void OnTriggerEnter(Collider other)
     //{
