@@ -3125,3 +3125,67 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2268.437009 seconds.
+  path: Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExamplePrefabs/Cannon.prefab
+  artifactKey: Guid(98fe0711a57757841834f5d3575e660a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExamplePrefabs/Cannon.prefab using Guid(98fe0711a57757841834f5d3575e660a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3c73b18d3419f6dff160afdefc69ae') in 0.265890 seconds 
+  Import took 0.272665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/ExampleAssets/Textures/Props/Paint/PaintAnimMask.tif
+  artifactKey: Guid(5e98de278b2ccc14f89b76b85596a3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Textures/Props/Paint/PaintAnimMask.tif using Guid(5e98de278b2ccc14f89b76b85596a3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb176ddf7c424571b145b03b97f310c') in 0.056124 seconds 
+  Import took 0.062020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleTextures/Steam_A_from_Unity_sample_project_AngryBots.psd
+  artifactKey: Guid(d0f02542b58827040a53f41483d556fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleTextures/Steam_A_from_Unity_sample_project_AngryBots.psd using Guid(d0f02542b58827040a53f41483d556fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a60920cecbcf23a05e449d19945c21') in 0.035321 seconds 
+  Import took 0.041567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleTerrain/ExampleLaserCannonTerrain.asset
+  artifactKey: Guid(b8c692866a7f00f45b6dd836acf1bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleTerrain/ExampleLaserCannonTerrain.asset using Guid(b8c692866a7f00f45b6dd836acf1bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388da20be12a3f38bd54956fd78f2bf5') in 0.169058 seconds 
+  Import took 0.176295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.094421 seconds.
+  path: Assets/Animations/New Animation.anim
+  artifactKey: Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/New Animation.anim using Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75af233e4f6a2c0addc8c1facdfe2482') in 0.015590 seconds 
+  Import took 0.025799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001743 seconds.
+  path: Assets/Animations/New Animation.anim
+  artifactKey: Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/New Animation.anim using Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75af233e4f6a2c0addc8c1facdfe2482') in 0.005322 seconds 
+  Import took 0.013231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.188051 seconds.
+  path: Assets/Animations/Plane Flying.anim
+  artifactKey: Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Plane Flying.anim using Guid(080a15fa61b73ff4284a73ba09199f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dff53f2c7f1486e79a0eec96d562b08') in 0.011619 seconds 
+  Import took 0.021209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7859.327570 seconds.
+  path: Assets/Animations/Aircraft.controller
+  artifactKey: Guid(f1fc47ccd1d1c3843a8670f5b8605ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Aircraft.controller using Guid(f1fc47ccd1d1c3843a8670f5b8605ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0437500ba62fa831045927a1cf4643f') in 0.041943 seconds 
+  Import took 0.102538 seconds .
+
