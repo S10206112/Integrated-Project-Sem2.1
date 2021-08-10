@@ -8,18 +8,17 @@ public class EnemyHealthBar : MonoBehaviour
 {
     private Image HealthLength;
     public float currentHealth;
-    private float MaxHealth = 100f;
+    public float MaxHealth = 100;
     public SimpleEnemyHealth Enemy;
 
     private void Start()
     {
         HealthLength =  GetComponent<Image>();
-        Enemy = FindObjectOfType<SimpleEnemyHealth>();
-
+       
     }
     private void Update()
     {
-        currentHealth = Enemy.startingHealth;
+        currentHealth = Enemy.currentHealth;
         HealthLength.fillAmount = currentHealth / MaxHealth;    
         
     }

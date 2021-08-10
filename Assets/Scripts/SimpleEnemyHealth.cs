@@ -7,9 +7,9 @@ public class SimpleEnemyHealth : MonoBehaviour
 {
 
     [SerializeField]
-    public int startingHealth = 100;
+    public int startingHealth;
 
-    private int currentHealth;
+    public int currentHealth;
     public GameObject EnemyName;
     
     public GameObject Minions;

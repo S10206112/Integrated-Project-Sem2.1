@@ -4654,7 +4654,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227602135
 GameObject:
@@ -5428,7 +5428,7 @@ Transform:
   m_LocalScale: {x: 1.754441, y: 5.275459, z: 1.754441}
   m_Children: []
   m_Father: {fileID: 1802760381}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
 --- !u!114 &245857873
 MonoBehaviour:
@@ -5523,6 +5523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 245857871}
   Minions: {fileID: 1167354861}
 --- !u!23 &245857878
@@ -8118,6 +8119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 5410568303920471057}
   Minions: {fileID: 1167354861}
 --- !u!1 &444511494
@@ -9417,6 +9419,7 @@ GameObject:
   - component: {fileID: 519369104}
   - component: {fileID: 519369107}
   - component: {fileID: 519369106}
+  - component: {fileID: 519369105}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -9443,6 +9446,21 @@ RectTransform:
   m_AnchoredPosition: {x: 18, y: 11}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519369105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519369103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e948086e12554a47b5683a2adc19dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  MaxHealth: 25
+  Enemy: {fileID: 1743880751}
 --- !u!114 &519369106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11418,7 +11436,7 @@ Transform:
   m_LocalScale: {x: 1.754441, y: 5.275459, z: 1.754441}
   m_Children: []
   m_Father: {fileID: 1802760381}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
 --- !u!114 &612957556
 MonoBehaviour:
@@ -11513,6 +11531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 612957554}
   Minions: {fileID: 1167354861}
 --- !u!23 &612957561
@@ -15211,6 +15230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  currentHealth: 0
   EnemyName: {fileID: 0}
   Minions: {fileID: 0}
 --- !u!64 &919940818
@@ -16566,6 +16586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 25
+  currentHealth: 0
   EnemyName: {fileID: 1019825562}
   Minions: {fileID: 1167354861}
 --- !u!1001 &1020713801
@@ -17409,7 +17430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112780988}
-  m_LocalRotation: {x: 0.05827738, y: 0.48853472, z: -0.032725457, w: 0.8699808}
+  m_LocalRotation: {x: 0.058277376, y: 0.48853466, z: -0.032725453, w: 0.8699809}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17507,7 +17528,7 @@ Transform:
   - {fileID: 999866550}
   - {fileID: 201409484}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1130505249
 MeshCollider:
@@ -17913,7 +17934,7 @@ Transform:
   m_LocalScale: {x: 1.754441, y: 5.275459, z: 1.754441}
   m_Children: []
   m_Father: {fileID: 1802760381}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
 --- !u!114 &1145201341
 MonoBehaviour:
@@ -18008,6 +18029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 1145201339}
   Minions: {fileID: 1167354861}
 --- !u!23 &1145201346
@@ -18453,6 +18475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
+  currentHealth: 0
   EnemyName: {fileID: 1167354861}
   Minions: {fileID: 1167354861}
 --- !u!195 &1167354864
@@ -22088,7 +22111,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386211137}
-  m_LocalRotation: {x: 0.09115428, y: 0.48694658, z: -0.051187363, w: 0.8671527}
+  m_LocalRotation: {x: 0.09115428, y: 0.48694655, z: -0.051187366, w: 0.8671527}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -27452,7 +27475,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743433825}
-  m_LocalRotation: {x: 0.09115427, y: 0.48694658, z: -0.05118737, w: 0.86715263}
+  m_LocalRotation: {x: 0.09115428, y: 0.48694658, z: -0.051187363, w: 0.86715275}
   m_LocalPosition: {x: -108.72538, y: 23.13, z: 816.2311}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -27556,12 +27579,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743880745}
   m_LocalRotation: {x: -0, y: 0.3420201, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: -54.199997, y: 25.400002, z: 832.4}
+  m_LocalPosition: {x: -58.09999, y: 28.703247, z: 834.9793}
   m_LocalScale: {x: 1.754441, y: 5.275459, z: 1.754441}
   m_Children:
   - {fileID: 1282022778}
-  m_Father: {fileID: 1802760381}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
 --- !u!114 &1743880747
 MonoBehaviour:
@@ -27655,7 +27678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04b9c8e676d7114886e9a8067e49464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 25
+  currentHealth: 0
   EnemyName: {fileID: 1743880745}
   Minions: {fileID: 1167354861}
 --- !u!23 &1743880752
@@ -28222,7 +28246,6 @@ Transform:
   m_Children:
   - {fileID: 1976822449}
   - {fileID: 2129989508}
-  - {fileID: 1743880746}
   - {fileID: 1145201340}
   - {fileID: 612957555}
   - {fileID: 245857872}
@@ -30505,6 +30528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 1976822448}
   Minions: {fileID: 1167354861}
 --- !u!23 &1976822455
@@ -36596,6 +36620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  currentHealth: 0
   EnemyName: {fileID: 2129989507}
   Minions: {fileID: 1167354861}
 --- !u!23 &2129989514
