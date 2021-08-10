@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SimpleEnemyHealth : MonoBehaviour
 {
 
     [SerializeField]
-    private int startingHealth = 5;
+    public int startingHealth = 100;
 
     private int currentHealth;
     public GameObject EnemyName;
     
     public GameObject Minions;
 
+   
+
     private void OnEnable()
     {
+        
         currentHealth = startingHealth;
     }
+
+    
 
     public void TakeDamage(int damageAmount)
     {
@@ -38,4 +44,6 @@ public class SimpleEnemyHealth : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+
+    
 
