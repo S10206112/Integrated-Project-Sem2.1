@@ -6,7 +6,9 @@ public class playerEvent : MonoBehaviour
 {
     public float PlayerHealth = 100;
 
-   
+    public CharacterController controller;
+
+    public Transform respawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,10 @@ public class playerEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerHealth == 0)
+        {
+            respawn();
+        }
     }
     //collision with player
     void OnTriggerEnter(Collider other)
@@ -29,6 +34,7 @@ public class playerEvent : MonoBehaviour
             //player takes damage from the attack
             TakeDamage(10);
         }
+        
         //if player jumps on trampoline
         //if (other.gameObject.CompareTag("Trampoline"))
         //{
@@ -42,6 +48,13 @@ public class playerEvent : MonoBehaviour
         //player health gets deducted by the damage taken
         PlayerHealth -= damage;
         
+    }
+
+    void respawn()
+    {
+        Debug.Log("Player has died, returning to respawn point");
+        PlayerHealth = 100;
+        controller.transform.position = respawnPoint.transform.position;
     }
 
 }

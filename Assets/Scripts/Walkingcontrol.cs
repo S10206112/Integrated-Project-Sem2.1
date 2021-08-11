@@ -134,7 +134,7 @@ public class Walkingcontrol : MonoBehaviour
         if (other.gameObject.CompareTag("Trampoline"))
         {
             Debug.Log("Player landed on trampoline");
-            jumpHeight = 80;
+            jumpHeight = 80;    
         }
         else 
         {
@@ -152,6 +152,14 @@ public class Walkingcontrol : MonoBehaviour
             Debug.Log("Teleported to Train");
             //player teleports to train
             controller.transform.position = teleportToTrain.transform.position;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Trampoline"))
+        {
+            Debug.Log("Player has left the trampoline");
+            jumpHeight = 8;    
         }
     }
     //void OnTriggerEnter(Collider other)
