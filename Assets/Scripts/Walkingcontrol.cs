@@ -38,7 +38,9 @@ public class Walkingcontrol : MonoBehaviour
     //bool for when the player is grounded
     bool isGrounded;
 
-    public Transform teleportTarget;
+    public Transform teleportToBox;
+
+    public Transform teleportToTrain;
 
     //refers to the audio source for player's jump
     [SerializeField]
@@ -143,7 +145,13 @@ public class Walkingcontrol : MonoBehaviour
         {
             Debug.Log("Teleported to Box");
             //player teleports to Box
-            controller.transform.position = teleportTarget.transform.position;
+            controller.transform.position = teleportToBox.transform.position;
+        }
+        if (other.gameObject.CompareTag("TeleportToTrain"))
+        {
+            Debug.Log("Teleported to Train");
+            //player teleports to train
+            controller.transform.position = teleportToTrain.transform.position;
         }
     }
     //void OnTriggerEnter(Collider other)
