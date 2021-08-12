@@ -10,7 +10,9 @@ public class playerEvent : MonoBehaviour
 
     public Transform respawnPoint;
 
-    public int PlayerKills = 5;
+    public int PlayerKills = 0;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +31,10 @@ public class playerEvent : MonoBehaviour
 
         if (PlayerKills == 5)
         {
-            Debug.Log("Quest 1 Completed : 5 Enemies Killed!");
+            Debug.Log("Quest 1 Completed : Kill 5 enemies");
         }
+
+        
     }
     //collision with player
     void OnTriggerEnter(Collider other)
@@ -42,7 +46,16 @@ public class playerEvent : MonoBehaviour
             //player takes damage from the attack
             TakeDamage(10);
         }
-        
+        if (other.gameObject.CompareTag("GoToShelves"))
+        {
+            Debug.Log("Quest 2 Complete : Go to Shelves");
+            
+        }
+        if (other.gameObject.CompareTag("CompletedMaze"))
+        {
+            Debug.Log("Quest 3 Complete : Completed Maze");
+            
+        }
         //if player jumps on trampoline
         //if (other.gameObject.CompareTag("Trampoline"))
         //{
