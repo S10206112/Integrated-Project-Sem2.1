@@ -25,6 +25,11 @@ public class playerEvent : MonoBehaviour
         {
             respawn();
         }
+
+        if (PlayerKills == 5)
+        {
+            Debug.Log("Quest 1 Completed : 5 Enemies Killed!");
+        }
     }
     //collision with player
     void OnTriggerEnter(Collider other)
@@ -61,6 +66,7 @@ public class playerEvent : MonoBehaviour
 
     public void Addkills()
     {
+        
         PlayerKills += 1;
         Debug.Log("Player has" + PlayerKills + "Kills");
     }

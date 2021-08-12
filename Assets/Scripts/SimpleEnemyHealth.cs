@@ -29,6 +29,7 @@ public class SimpleEnemyHealth : MonoBehaviour
     }
 
     
+    
 
     public void TakeDamage(int damageAmount)
     {
@@ -47,7 +48,7 @@ public class SimpleEnemyHealth : MonoBehaviour
     
     private void Die()
     {
-        //Player.GetComponent<playerEvent>().Addkills();
+        Player.GetComponent<playerEvent>().Addkills();
         gameObject.SetActive(false);
     }
 }
