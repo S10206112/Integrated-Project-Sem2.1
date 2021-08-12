@@ -23,6 +23,7 @@ public class playerEvent : MonoBehaviour
     {
         if (PlayerHealth == 0)
         {
+            Debug.Log("Player has died");
             respawn();
         }
 
