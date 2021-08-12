@@ -14,8 +14,14 @@ public class SimpleEnemyHealth : MonoBehaviour
     
     public GameObject Minions;
 
+    public playerEvent Player;
+
    
 
+    private void Start()
+    {
+        
+    }
     private void OnEnable()
     {
         
@@ -41,6 +47,7 @@ public class SimpleEnemyHealth : MonoBehaviour
     
     private void Die()
     {
+        //Player.GetComponent<playerEvent>().Addkills();
         gameObject.SetActive(false);
     }
 }

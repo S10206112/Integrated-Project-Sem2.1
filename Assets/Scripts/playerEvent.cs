@@ -10,6 +10,8 @@ public class playerEvent : MonoBehaviour
 
     public Transform respawnPoint;
 
+    public int PlayerKills = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +58,12 @@ public class playerEvent : MonoBehaviour
         PlayerHealth = 100;
         controller.transform.position = respawnPoint.transform.position;
     }
+
+    public void Addkills()
+    {
+        PlayerKills += 1;
+        Debug.Log("Player has" + PlayerKills + "Kills");
+    }
+        
 
 }
