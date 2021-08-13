@@ -76,7 +76,7 @@ public class Walkingcontrol : MonoBehaviour
         //the basic WASD player controls
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-
+        
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * currentSpeed * Time.deltaTime);
