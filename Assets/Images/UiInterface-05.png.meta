@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: d2806578c5818c54794cf319706ef86c
+guid: 831a752f23ef9a645bcc63c5771ac68c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8887196705001169217
-    second: UIAgain-05-05_0
+      213: 4826403344246351941
+    second: UiInterface-05_0
   - first:
-      213: -8317360557110116897
-    second: UIAgain-05-05_1
+      213: 3415710489403717136
+    second: UiInterface-05_1
   - first:
-      213: 7305355730444461565
-    second: UIAgain-05-05_2
+      213: -7546611635882841316
+    second: UiInterface-05_2
   - first:
-      213: -3735216090649750320
-    second: UIAgain-05-05_3
+      213: 2365603541468039306
+    second: UiInterface-05_3
   - first:
-      213: -7740795268031534289
-    second: UIAgain-05-05_4
+      213: -7193776526048486272
+    second: UiInterface-05_4
   - first:
-      213: -1065779847475538330
-    second: UIAgain-05-05_5
+      213: 8169822585483084141
+    second: UiInterface-05_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,127 +145,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UIAgain-05-05_0
+      name: UiInterface-05_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 753
-        width: 428
-        height: 271
+        x: 90
+        y: 749
+        width: 440
+        height: 279
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbe1265eea55aa480800000000000000
-      internalID: -8887196705001169217
+      spriteID: 548af8c2544daf240800000000000000
+      internalID: 4826403344246351941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIAgain-05-05_1
+      name: UiInterface-05_1
       rect:
         serializedVersion: 2
-        x: 902
-        y: 734
-        width: 271
-        height: 317
+        x: 88
+        y: 429
+        width: 361
+        height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdd3b9cf3acc29c80800000000000000
-      internalID: -8317360557110116897
+      spriteID: 016fb78c79a076f20800000000000000
+      internalID: 3415710489403717136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIAgain-05-05_2
+      name: UiInterface-05_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 435
-        width: 348
-        height: 249
+        x: 662
+        y: 752
+        width: 277
+        height: 287
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df5a107d456d16560800000000000000
-      internalID: 7305355730444461565
+      spriteID: c1baf5963bc054790800000000000000
+      internalID: -7546611635882841316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIAgain-05-05_3
+      name: UiInterface-05_3
       rect:
         serializedVersion: 2
-        x: 111
-        y: 309
-        width: 73
-        height: 26
+        x: 977
+        y: 874
+        width: 267
+        height: 134
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d49f7d61c8d92cc0800000000000000
-      internalID: -3735216090649750320
+      spriteID: a88cb9033ef44d020800000000000000
+      internalID: 2365603541468039306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIAgain-05-05_4
+      name: UiInterface-05_4
       rect:
         serializedVersion: 2
-        x: 106
-        y: 163
-        width: 85
-        height: 141
+        x: 957
+        y: 208
+        width: 362
+        height: 594
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2ba4f957bb239490800000000000000
-      internalID: -7740795268031534289
+      spriteID: 08c16532d529a2c90800000000000000
+      internalID: -7193776526048486272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIAgain-05-05_5
+      name: UiInterface-05_5
       rect:
         serializedVersion: 2
-        x: 105
-        y: 118
-        width: 782
-        height: 27
+        x: 165
+        y: 86
+        width: 900
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 666537e10e69531f0800000000000000
-      internalID: -1065779847475538330
+      spriteID: d61cead1b5a016170800000000000000
+      internalID: 8169822585483084141
       vertices: []
       indices: 
       edges: []
@@ -273,7 +273,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7beb64b56bcd0a94c817d71faf19ce65
+    spriteID: aeec7285aea63d74d8c31780f0e30b57
     internalID: 0
     vertices: []
     indices: 
