@@ -29,7 +29,9 @@ public class BossScript : MonoBehaviour
 
     private void Awake()
     {
+        //define player component
         player = GameObject.Find("Player").transform;
+        //define agent
         agent = GetComponent<NavMeshAgent>();
 
     }
@@ -40,6 +42,7 @@ public class BossScript : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        //trigger the action based on the conditions (whether to patrol, chase or attack the player)
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
@@ -64,15 +67,19 @@ public class BossScript : MonoBehaviour
         float randomZ = Random.Range(-walkPointRange, walkPointRange );
         float randomX = Random.Range(-walkPointRange, walkPointRange );
 
+        //walking points for the AI
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
+        //if the distance in front of the player is a ground, AI can walk
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
 
 
     }
+    //chase player function
     private void ChasePlayer()
     { 
+        //nav agent follows the player
         agent.SetDestination(player.position);
     }
     private void AttackPlayer()
@@ -80,8 +87,10 @@ public class BossScript : MonoBehaviour
         //enemy doesnt move
         agent.SetDestination(transform.position); 
 
+        //enemy looks at player
         transform.LookAt(player);
         
+        // if enemy already attacks the player, gives it a attack cooldown
         if (!alreadyAttacked)
         {
             
@@ -90,11 +99,14 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    //reset the enemy attack
     private void ResetAttack()
     {
         alreadyAttacked = false;
     }
 
+
+    //using this in another script (not active in this script)
     public void TakeDamage(int damage)
     {
         SimpleEnemyHealth -= damage;

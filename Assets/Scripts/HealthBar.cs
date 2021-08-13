@@ -19,7 +19,9 @@ public class HealthBar : MonoBehaviour
     }
     private void Update()
     {
+        //syncs the player health to the current health
         currentHealth = Player.PlayerHealth;
+        //fills the healthbar based on percentage of health player has
         HealthLength.fillAmount = currentHealth / MaxHealth;    
         
     }
