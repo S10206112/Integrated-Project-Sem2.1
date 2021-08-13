@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class BlockClashSound : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource blocksfalling;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,9 @@ public class BlockClashSound : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        blocksfalling.Play();
     }
 }
