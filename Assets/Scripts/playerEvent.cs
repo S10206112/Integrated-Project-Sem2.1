@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerEvent : MonoBehaviour
 {
@@ -18,6 +19,14 @@ public class playerEvent : MonoBehaviour
 
     //to ref the penguin boss
     public GameObject PenguinBoss;
+
+    public GameObject Quest1;
+    public GameObject Quest2;
+    public GameObject Quest3;
+    public GameObject Quest4;
+    public GameObject Quest5;
+
+
 
     
 
@@ -41,20 +50,25 @@ public class playerEvent : MonoBehaviour
 
         //Quest Completion conditions
         //if the player gets 5 kills
-        if (PlayerKills == 5)
+        if (PlayerKills == 3)
         {
             //debuglog
-            Debug.Log("Quest 1 Completed : Kill 5 enemies");
+            Debug.Log("Quest 1 Completed : Kill 3 enemies");
+            Quest1.SetActive(true);
         }
         // if the boss has been defeated
         if (PenguinBoss.activeInHierarchy == false)
         {
             //debuglog
             Debug.Log("Quest 5 Completed : Penguin Boss defeated");
+            Quest5.SetActive(true);
+            SceneManager.LoadScene ("YouWin");
         }
+    }
+        
 
         
-    }
+    
     //collision with player
     void OnTriggerEnter(Collider other)
     {
@@ -70,13 +84,21 @@ public class playerEvent : MonoBehaviour
         {
             //debuglog
             Debug.Log("Quest 2 Complete : Go to Shelves");
+            Quest2.SetActive(true);
         }
         //when player reaches the end of the maze
         if (other.gameObject.CompareTag("CompletedMaze"))
         {
             //debuglog
             Debug.Log("Quest 3 Complete : Completed Maze");
-            
+            Quest3.SetActive(true);
+        }
+        //when player reaches the end of the maze
+        if (other.gameObject.CompareTag("CompletedTrain"))
+        {
+            //debuglog
+            Debug.Log("Quest 4 Complete : Completed Train");
+            Quest4.SetActive(true);
         }
         //if player jumps on trampoline
         //if (other.gameObject.CompareTag("Trampoline"))
@@ -99,9 +121,10 @@ public class playerEvent : MonoBehaviour
         //debuglog
         Debug.Log("Player has died, returning to respawn point");
         //resets player health to full
-        PlayerHealth = 100;
+        //PlayerHealth = 100;
         //resets player position to respawn point
-        controller.transform.position = respawnPoint.transform.position;
+        //controller.transform.position = respawnPoint.transform.position;
+        SceneManager.LoadScene ("GameOver");
     }
 
     //tallying the num of kills the player has
