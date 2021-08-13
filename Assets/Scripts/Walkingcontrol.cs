@@ -50,6 +50,9 @@ public class Walkingcontrol : MonoBehaviour
     [SerializeField]
     private AudioSource SprintSource;
 
+    [SerializeField]
+    private AudioSource WalkingSource;
+
     //public float PlayerHealth = 100;
 
     Animator animator;
@@ -118,6 +121,7 @@ public class Walkingcontrol : MonoBehaviour
         //if the player is moving in a certain direction, moves the character object to face that direction
         if (direction.magnitude >= 0.1f)
         {
+            WalkingSource.Play();
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
