@@ -52,6 +52,8 @@ public class Walkingcontrol : MonoBehaviour
 
     //public float PlayerHealth = 100;
 
+    Animator animator;
+
     void Start()
     {
         //define what is the character controller
