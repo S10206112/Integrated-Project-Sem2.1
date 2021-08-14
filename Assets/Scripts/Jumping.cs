@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+
+//NOT USING THIS SCRIPT
 [RequireComponent(typeof(Rigidbody))]
 public class Jumping : MonoBehaviour
 {

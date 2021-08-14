@@ -43,7 +43,7 @@ public class SimpleEnemyHealth : MonoBehaviour
         if (EnemyName.name == "PenguinBoss")
             {
                 //spawns little minions that attack the player
-                Instantiate(Minions, new Vector3(80, 100, 575), Quaternion.identity);
+                Instantiate(Minions, new Vector3(70, 50, 716), Quaternion.identity);
                 //debuglog minion spawned
                 Debug.Log("Minions spawned");
             }

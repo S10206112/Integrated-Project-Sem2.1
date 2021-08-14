@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//NOT USING THIS SCRIPT
 public class Congratulations : MonoBehaviour
 {
     public GameObject PenguinBoss;

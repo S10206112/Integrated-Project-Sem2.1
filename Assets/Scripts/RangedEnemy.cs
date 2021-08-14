@@ -41,7 +41,8 @@ public class RangedEnemy : MonoBehaviour
         //checking the sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
+        
+        //trigger conditions for the enemy to do the following actions
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
@@ -49,8 +50,10 @@ public class RangedEnemy : MonoBehaviour
 
     private void Patroling()
     {
+        //if no walkpoint yet, then create one
         if (!walkPointSet) SearchWalkPoint();
 
+        //go to walkpoint if set
         if (walkPointSet)
             agent.SetDestination(walkPoint);
 
@@ -75,13 +78,14 @@ public class RangedEnemy : MonoBehaviour
     }
     private void ChasePlayer()
     { 
+        //follow player
         agent.SetDestination(player.position);
     }
     private void AttackPlayer()
     {
         //enemy doesnt move
         agent.SetDestination(transform.position); 
-
+        //faces player
         transform.LookAt(player);
         
         if (!alreadyAttacked)
@@ -99,9 +103,10 @@ public class RangedEnemy : MonoBehaviour
 
     private void ResetAttack()
     {
+        //reset attack
         alreadyAttacked = false;
     }
-
+    //Used in another script
     public void TakeDamage(int damage)
     {
         SimpleEnemyHealth -= damage;

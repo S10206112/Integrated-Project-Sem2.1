@@ -50,7 +50,12 @@ public class Walkingcontrol : MonoBehaviour
     [SerializeField]
     private AudioSource SprintSource;
 
+    [SerializeField]
+    private AudioSource WalkingSource;
+
     //public float PlayerHealth = 100;
+
+    Animator animator;
 
     void Start()
     {
@@ -76,7 +81,7 @@ public class Walkingcontrol : MonoBehaviour
         //the basic WASD player controls
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-
+        
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * currentSpeed * Time.deltaTime);
@@ -116,6 +121,7 @@ public class Walkingcontrol : MonoBehaviour
         //if the player is moving in a certain direction, moves the character object to face that direction
         if (direction.magnitude >= 0.1f)
         {
+            WalkingSource.Play();
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);

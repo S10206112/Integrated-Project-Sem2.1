@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOT USING THIS SCRIPT
 public class ChangeMovement : MonoBehaviour
 {
     public Flyingcontrol Flyingcontrol;
