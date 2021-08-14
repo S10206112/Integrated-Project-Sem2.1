@@ -21,6 +21,9 @@ public class BossScript : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+
+    [SerializeField]
+    private AudioSource PenguinRoar;
    
 
     //States   
@@ -44,7 +47,11 @@ public class BossScript : MonoBehaviour
 
         //trigger the action based on the conditions (whether to patrol, chase or attack the player)
         //if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (playerInSightRange && !playerInAttackRange) 
+        {
+            PenguinRoar.Play(); 
+            ChasePlayer();
+        }
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
