@@ -43,24 +43,24 @@ public class BossScript : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         //trigger the action based on the conditions (whether to patrol, chase or attack the player)
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        //if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
-    private void Patroling()
-    {
-        if (!walkPointSet) SearchWalkPoint();
+    //private void Patroling()
+    //{
+    //    if (!walkPointSet) SearchWalkPoint();
 
-        if (walkPointSet)
-            agent.SetDestination(walkPoint);
+    //    if (walkPointSet)
+    //        agent.SetDestination(walkPoint);
 
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
+    //    Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         //Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
-    }
+    //    if (distanceToWalkPoint.magnitude < 1f)
+    //        walkPointSet = false;
+    //}
     private void SearchWalkPoint()
     {
         //calculating the random point in range
