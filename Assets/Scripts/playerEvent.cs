@@ -20,11 +20,13 @@ public class playerEvent : MonoBehaviour
     //to ref the penguin boss
     public GameObject PenguinBoss;
 
+    public Animator QuestLog;
     public GameObject Quest1;
     public GameObject Quest2;
     public GameObject Quest3;
     public GameObject Quest4;
     public GameObject Quest5;
+
 
 
 
@@ -54,7 +56,9 @@ public class playerEvent : MonoBehaviour
         {
             //debuglog
             Debug.Log("Quest 1 Completed : Kill 3 enemies");
+            QuestLog.SetBool("SeeQuest", true);
             Quest1.SetActive(true);
+
         }
         // if the boss has been defeated
         if (PenguinBoss.activeInHierarchy == false)
@@ -84,6 +88,7 @@ public class playerEvent : MonoBehaviour
         {
             //debuglog
             Debug.Log("Quest 2 Complete : Go to Shelves");
+            QuestLog.SetBool("SeeQuest", true);
             Quest2.SetActive(true);
         }
         //when player reaches the end of the maze
@@ -91,6 +96,7 @@ public class playerEvent : MonoBehaviour
         {
             //debuglog
             Debug.Log("Quest 3 Complete : Completed Maze");
+            QuestLog.SetBool("SeeQuest", true);
             Quest3.SetActive(true);
         }
         //when player reaches the end of the maze
@@ -98,6 +104,7 @@ public class playerEvent : MonoBehaviour
         {
             //debuglog
             Debug.Log("Quest 4 Complete : Completed Train");
+            QuestLog.SetBool("SeeQuest", true);
             Quest4.SetActive(true);
         }
         //if player jumps on trampoline
